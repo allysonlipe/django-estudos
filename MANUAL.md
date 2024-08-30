@@ -41,7 +41,7 @@
    No Django, um projeto é a estrutura global do seu aplicativo web. Para criar um projeto, use o comando `django-admin`:
 
    ```bash
-   django-admin startproject nome_do_projeto
+   django-admin startproject nome_do_projeto .
    ```
 
    Isso criará um diretório com o nome do projeto contendo a estrutura inicial.
