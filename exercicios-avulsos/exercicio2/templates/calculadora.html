@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Calculadora
+{% endblock %}
+{% block content %}
+  <div class="container col-5">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Operador 1</th>
+          <th scope="col">Operação</th>
+          <th scope="col">Operador 2</th>
+          <th scope="col">Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{n1}}</td>
+          <td>+</td>
+          <td>{{n2}}</td>
+          <td>{{soma}}</td>
+        </tr>
+        <tr>
+          <td>{{n1}}</td>
+          <td>-</td>
+          <td>{{n2}}</td>
+          <td>{{sub}}</td>
+        </tr>
+        <tr>
+          <td>{{n1}}</td>
+          <td>x</td>
+          <td>{{n2}}</td>
+          <td>{{mult}}</td>
+        </tr>
+        <tr>
+          <td>{{n1}}</td>
+          <td>÷</td>
+          <td>{{n2}}</td>
+          <td>{{divisao}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

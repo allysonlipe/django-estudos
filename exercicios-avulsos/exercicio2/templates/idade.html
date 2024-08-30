@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+  Idade
+{% endblock %}
+
+{% block content %}
+  <div>
+    {% if ano < 2024 %}
+      <h1>Você nasceu em {{ ano }}, então você tem: {{ idade }} anos.</h1>
+    {% else %}
+      <h1>O ano fornecido {{ ano }} não é válido, pois é maior ou igual a 2024.</h1>
+    {% endif %}
+  </div>
+{% endblock %}

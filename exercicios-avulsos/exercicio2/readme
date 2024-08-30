@@ -1,0 +1,96 @@
+# Questão 1
+
+Crie uma rota chamada **/q1_pedirpizza** que receba como parâmetro o sabor de uma pizza. No arquivo q1_pedirpizza.html, substitua onde tem SABOR pelo parâmetro recebido. Assim, quando o usuário acessar na URL no endereço de exemplo:
+
+```html
+http://seuprojeto.com/q1_pedirpizza/Calabreza
+```
+
+sua página HTML deve exibir:
+
+```html
+Seu pedido foi recebido. Estamos preparando sua pizza de Calabreza!
+```
+
+# Questão 2
+
+Crie uma rota chamada **/q2_idade** que receba como parâmetro o ano de nascimento de uma pessoa. Assim, quando o usuário acessar na URL como no exemplo:
+
+```html
+http://seuprojeto.com/idade/2005
+```
+
+sua página HTML (idade.html) deve exibir:
+
+```html
+Você nasceu em 2005, então você tem 19 anos.
+```
+
+Dica: no seu método pyhton, crie uma variável que faça a subtração do ano atual pelo parâmetro recebido. Ex:
+
+```python
+@app.route('/q2_idade...')
+def idade(...):
+	idade = 2023 - ano
+	return render_template...
+```
+
+Ou caso deseje obter o ano atual de forma dinâmica, importe a biblioteca datetime e use o date.today().year
+
+Defina ainda o valor default do parâmetro do ano de nascimento como 2023 de forma que se o usuário não informar o ano de nascimento, e digitar apenas:
+
+```html
+http://seuprojeto.com/q2_idade
+```
+
+a mensagem exibida deve ser:
+
+```html
+Você nasceu em 2024, então você tem 0 anos.
+```
+
+# Questão 3
+Crie uma rota chamada **/q3_cordefundo** que receba como parâmetro uma cor em inglês e passe essa cor para a página HTML q3_cordefundo.html. Modifique a tag style existente na página html no local indicado para definir a cor do plano de fundo da pagina. Defina o valor default para a cor como sendo white, para o caso do usuário abrir a rota sem passar nenhum parâmetro.
+
+Assim, quando o usuário acessar na URL o endereço de exemplo:
+
+```html
+http://seuprojeto.com/q3_cordefundo/pink
+```
+
+sua página HTML deve exibir uma página com o plano de fundo na cor rosa. Já se acessar:
+
+```html
+http://seuprojeto.com/q3_cordefundo
+```
+
+a cor do plano de fundo deve ser branca.
+
+# Questão 4
+
+Crie uma rota chamada **/q4_calculadora** que receba como parâmetro dois números, referentes a dois operadores em um cálculo matemático.
+
+No método associado à rota q4_calculadora, efetue as 4 operações aritméticas (soma, subtração multiplicação e divisão) e passe os resultados como parâmetro do método render_template para o arquivo calculadora.html. 
+
+Os resultados devem ser exibidos na tabela pré-preenchida no arquivo q4_calculadora.html.
+
+Assim, quando o usuário acessar na URL o endereço de exemplo:
+
+```html
+http://seuprojeto.com/q4_calculadora/10/5
+```
+
+a sua página HTML vai exibir o resultado das 4 operações matemáticas para esses 2 números, algo como:
+
+| Operador 1  | Operação | Operador 2   | Resultado |
+| ------- | -------- | ------- | -------- |
+| 10   | +    |5   | 15    |
+| 10   | -    |5 | 5    |
+| 10   | *    |5 | 50    |
+| 10   | /    |5 | 2    |
+
+Defina os valores default como 1 para os dois operadores, para o caso do usuário não digitar nenhum parâmetro na URL:
+
+```html
+http://seuprojeto.com/q4_calculadora
+```
