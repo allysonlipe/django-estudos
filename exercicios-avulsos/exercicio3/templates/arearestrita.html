@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    {% if status == 'lock' %}
+    <img src="{% static 'images/lock.png' %}" alt="">
+    {% elif status == 'unlock'%}
+    <img src="{% static 'images/unlock.png' %}" alt="">
+    {% else %}
+    <h1>Digite um parâmetro válido na URL: lock ou unlock</h1>
+    {% endif %}
+</body>
+</html>
